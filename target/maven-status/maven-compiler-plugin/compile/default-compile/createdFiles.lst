@@ -1,0 +1,16 @@
+com\mycompany\mccapi\resources\UserService.class
+com\mycompany\mccapi\resources\JakartaEE8Resource.class
+com\mycompany\mccapi\resources\CarService.class
+com\megacitycab\filters\SessionAuthenticationFilter.class
+com\mycompany\mccapi\resources\DriverService.class
+Category\Category.class
+Car\Car.class
+com\mycompany\mccapi\resources\CategoryService.class
+DBConnection\ConnectionHelper.class
+User\Users.class
+Category\CategoryCRUDOperation.class
+Car\CarCRUDOperation.class
+Driver\DriverCRUDOperation.class
+Driver\Driver.class
+User\UserCRUDOperation.class
+com\mycompany\mccapi\JakartaRestConfiguration.class
