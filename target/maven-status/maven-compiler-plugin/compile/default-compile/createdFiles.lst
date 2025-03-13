@@ -1,10 +1,14 @@
 com\mycompany\mccapi\resources\UserService.class
+Booking\BookingCRUDOperation.class
 com\mycompany\mccapi\resources\JakartaEE8Resource.class
+Package\PackageCRUDOperation.class
 com\mycompany\mccapi\resources\CarService.class
 com\megacitycab\filters\SessionAuthenticationFilter.class
 com\mycompany\mccapi\resources\DriverService.class
 Category\Category.class
 Car\Car.class
+Booking\Booking.class
+Package\Package.class
 com\mycompany\mccapi\resources\CategoryService.class
 DBConnection\ConnectionHelper.class
 User\Users.class
@@ -13,4 +17,6 @@ Car\CarCRUDOperation.class
 Driver\DriverCRUDOperation.class
 Driver\Driver.class
 User\UserCRUDOperation.class
+com\mycompany\mccapi\resources\PackageService.class
+com\mycompany\mccapi\resources\BookingService.class
 com\mycompany\mccapi\JakartaRestConfiguration.class

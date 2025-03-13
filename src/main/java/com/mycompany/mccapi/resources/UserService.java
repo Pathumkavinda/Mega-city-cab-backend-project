@@ -51,7 +51,25 @@ public class UserService {
         List<Users> users = UserCRUDOperation.getUsers();
         return Response.ok(gson.toJson(users)).build();
     }
-
+    /**
+     * Get a user by ID
+     * @param id The user ID to retrieve
+     * @return User data in JSON format or 404 error
+     */
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getUserById(@PathParam("id") int id) {
+        Users user = UserCRUDOperation.getUserById(id);
+        
+        if (user != null) {
+            return Response.ok(gson.toJson(user)).build();
+        }
+        
+        return Response.status(Response.Status.NOT_FOUND)
+                .entity("{\"message\": \"User not found\"}")
+                .build();
+    }
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)

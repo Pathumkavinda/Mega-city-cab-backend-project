@@ -61,6 +61,31 @@ private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder()
         }
         return users;
     }
+     public static Users getUserById(int userId) {
+        String query = "SELECT * FROM users WHERE id = ?";
+        try (Connection conn = ConnectionHelper.getConnection(); 
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setInt(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            
+            if (rs.next()) {
+                return new Users(
+                        rs.getInt("id"),
+                        rs.getString("username"),
+                        rs.getString("pWord"),
+                        rs.getString("uRole"),
+                        rs.getString("fullName"),
+                        rs.getString("uEmail"),
+                        rs.getString("nic_number"),
+                        rs.getString("address"),
+                        rs.getString("phone"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static int updateUser(Users user) {
         String query = "UPDATE users SET username=?, pWord=?, uRole=?, fullName=?, uEmail=?, nic_number=?, address=?, phone=? WHERE id=?";
