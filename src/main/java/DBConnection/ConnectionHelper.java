@@ -13,10 +13,9 @@ import java.sql.SQLException;
  * @author Janith
  */
 public class ConnectionHelper {
-
-    private static final String URL = "jdbc:mysql://localhost:3306/mccDB?useSSL=false&allowPublicKeyRetrieval=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/megaCityDB?useSSL=false&allowPublicKeyRetrieval=true";
     private static final String USER = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "12345678";
 
     public static Connection getConnection() throws SQLException {
         try {
@@ -39,4 +38,6 @@ public class ConnectionHelper {
             }
         } catch (SQLException e) {
             System.out.println("Error connecting to the database: " + e.getMessage());
-        }}}
+        }
+    }
+}
